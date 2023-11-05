@@ -1,0 +1,15 @@
+<section *ngIf="pokemon.id" class="pok-card-container">
+  <div class="pok-card-img-container">
+    <div class="pok-card-img pok-card-border">
+      <img [src]="pokemon.image" alt="Image of {{pokemon.name}} pokemon" />
+    </div>
+  </div>
+  <div class="pok-card-info-container">
+    <div class="pok-card-name-container pok-card-border">
+      <span class="pok-card-id">Nº {{pokemon.id}}</span> <span class="pok-card-name">{{pokemon.name}}</span>
+    </div>
+    <div class="pok-card-types pok-card-border">
+      <div *ngFor="let type of pokemon.type" class="pok-card-type">{{type}}</div>
+    </div>
+  </div>
+</section>
