@@ -20,7 +20,7 @@ export class PokemonComponent implements OnInit {
   }
 
   async getPokemon() {
-    await this.servPokemon.getById(3).subscribe((res: Array<Pokemon>) => {
+    await this.servPokemon.getAll().subscribe((res: Array<Pokemon>) => {
       this.pokemonList = res
     })
   }

@@ -15,4 +15,9 @@ export class PokemonService {
     const url: string = `${this.apiURLById}/${id}`
     return this.http.get(url).pipe()
   }
+
+  getAll(): Observable<any> {
+    const url: string = `${this.apiURLById}`
+    return this.http.get(url).pipe()
+  }
 }
